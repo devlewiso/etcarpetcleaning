@@ -54,7 +54,7 @@ export default function Services() {
       title: 'Upholstery Cleaning',
       description: 'Professional cleaning services for your furniture, ensuring it looks as good as new.',
       cost: '$129',
-      image: '/images/upholstery-cleaning.jpg',
+      image: '/images/upholstery-cleaning.webp',
     },
     {
       title: 'Pet Odor Removal',
