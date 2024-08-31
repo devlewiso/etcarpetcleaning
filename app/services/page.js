@@ -90,7 +90,7 @@ export default function Services() {
         <h1 className="text-4xl font-bold mb-4">Our Services</h1>
         <p className="text-lg mb-8">
           At ET Steam Carpet Cleaning, we offer a comprehensive range of cleaning services tailored to meet your needs.
-          Whether you're looking for residential or commercial cleaning, our skilled team is ready to deliver exceptional results.
+          Whether you&apos;re looking for residential or commercial cleaning, our skilled team is ready to deliver exceptional results.
         </p>
 
         {/* Services Grid */}
