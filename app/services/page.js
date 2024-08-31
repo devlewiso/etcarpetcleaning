@@ -60,7 +60,7 @@ export default function Services() {
       title: 'Pet Odor Removal',
       description: 'Specialized treatments to eliminate unpleasant pet odors from your carpets and upholstery.',
       cost: '$149',
-      image: '/images/pet-odor-removal.jpg',
+      image: '/images/pet-odor-removal.webp',
     },
     {
       title: 'Deep Cleaning',
