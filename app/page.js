@@ -6,7 +6,7 @@ export default function Home() {
       <div className="max-w-4xl w-full text-center">
         {/* Phone Number Section */}
         <div className="mb-8">
-          <p className="text-xl font-bold">Schedule an Appointment: <a href="tel:+1234567890" className="text-blue-500 hover:underline">+1 (805) 704-2301</a></p>
+          <p className="text-xl font-bold">Schedule an Appointment: <a href="tel:+18027042301" className="text-blue-500 hover:underline">+1 (805) 704-2301</a></p>
         </div>
 
         <h1 className="text-4xl font-bold mb-4">Welcome to Carpet Cleaning Company SLO</h1>
@@ -14,13 +14,7 @@ export default function Home() {
           We offer professional carpet cleaning services for homes and businesses in San Luis Obispo, California.
           With years of experience and a highly skilled team, we guarantee exceptional results and impeccable customer service.
         </p>
-        <Image
-          src="/images/hover1.webp" // Updated path
-          alt="Carpet Cleaning"
-          width={800}
-          height={450}
-          className="rounded-lg shadow-lg mb-8 items-center"
-        />
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
           <div className="p-6 bg-card rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold mb-2">Residential Cleaning</h2>
@@ -68,6 +62,13 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <Image
+          src="/images/hover1.webp" // Updated path
+          alt="Carpet Cleaning"
+          width={800}
+          height={450}
+          className="rounded-lg shadow-lg mb-8 items-center"
+        />
         </section>
 
         {/* Our Process Section */}
