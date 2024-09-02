@@ -67,7 +67,7 @@ export default function Contact() {
           {/* Section 1 */}
           <div className="p-6 bg-white rounded-lg shadow-lg">
             <Image
-              src="/images/cleaning-process.jpg"
+              src="/images/cleaning-process.webp"
               alt="Cleaning Process"
               width={600}
               height={400}
