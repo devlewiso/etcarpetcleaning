@@ -8,11 +8,11 @@ const ServicePopup = ({ service, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-full w-full mx-4 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-32">
-        <h2 className="text-2xl font-bold mb-4 text-purple-800">{service.title}</h2>
+        <h2 className="text-2xl font-bold mb-4 text-blue-500">{service.title}</h2>
         <p className="mb-4 text-gray-700">{service.description}</p>
-        <p className="mb-4 font-semibold text-purple-800">Cost: {service.cost}</p>
+        <p className="mb-4 font-semibold text-blue-500">Cost: {service.cost}</p>
         <button
-          onClick={() => window.location.href = 'tel:+1234567890'}
+          onClick={() => window.location.href = 'tel:+18057042301'}
           className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600"
         >
           Call to Schedule
