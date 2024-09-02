@@ -7,10 +7,10 @@ import Link from 'next/link';
 const ServicePopup = ({ service, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-        <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
-        <p className="mb-4">{service.description}</p>
-        <p className="mb-4 font-semibold">Cost: {service.cost}</p>
+      <div className="bg-white p-6 rounded-lg shadow-lg max-w-full w-full mx-4 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-32">
+        <h2 className="text-2xl font-bold mb-4 text-purple-800">{service.title}</h2>
+        <p className="mb-4 text-gray-700">{service.description}</p>
+        <p className="mb-4 font-semibold text-purple-800">Cost: {service.cost}</p>
         <button
           onClick={() => window.location.href = 'tel:+1234567890'}
           className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600"
@@ -84,11 +84,11 @@ export default function Services() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-background text-foreground">
-      <div className="max-w-4xl w-full text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100 text-gray-900">
+      <div className="w-full bg-white p-10 rounded-lg shadow-2xl">
         {/* Page Heading */}
-        <h1 className="text-4xl font-bold mb-4">Our Services</h1>
-        <p className="text-lg mb-8">
+        <h1 className="text-4xl font-bold mb-4 text-center">Our Services</h1>
+        <p className="text-lg mb-8 text-center">
           At ET Steam Carpet Cleaning, we offer a comprehensive range of cleaning services tailored to meet your needs.
           Whether you&apos;re looking for residential or commercial cleaning, our skilled team is ready to deliver exceptional results.
         </p>
@@ -134,7 +134,7 @@ export default function Services() {
         </div>
 
         {/* Contact Us Button */}
-        <div className="mt-12">
+        <div className="mt-12 text-center">
           <Link href="/contact" className="inline-block px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600">
             Contact Us
           </Link>
