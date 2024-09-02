@@ -68,6 +68,24 @@ export default function Services() {
       cost: '$199',
       image: '/images/deep-cleaning.webp',
     },
+    {
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
+      cost: '$199',
+      image: '/images/deep-cleaning.webp',
+    },
+    {
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
+      cost: '$199',
+      image: '/images/deep-cleaning.webp',
+    },
+    {
+      title: 'Deep Cleaning',
+      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
+      cost: '$199',
+      image: '/images/deep-cleaning.webp',
+    },
   ];
 
   const additionalSections = [
@@ -94,27 +112,27 @@ export default function Services() {
         </p>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {services.map((service, index) => (
-            <div key={index} className="p-6 bg-card rounded-lg shadow-lg flex flex-col">
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg mb-4"
-              />
-              <h2 className="text-2xl font-semibold mb-2">{service.title}</h2>
-              <p className="flex-grow">{service.description}</p>
-              <button
-                onClick={() => setSelectedService(service)}
-                className="mt-4 px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600"
-              >
-                Ver Más
-              </button>
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-3 grid-rows-3 gap-4 mb-12">
+  {services.map((service, index) => (
+    <div key={index} className="p-2 bg-white rounded-lg shadow-md flex flex-col items-center">
+      <Image
+        src={service.image}
+        alt={service.title}
+        width={200}
+        height={150}
+        className="rounded-lg shadow-md mb-2"
+      />
+      <h2 className="text-sm font-semibold mb-2 text-center">{service.title}</h2>
+      <p className="text-xs text-center">{service.description}</p>
+      <button
+        onClick={() => setSelectedService(service)}
+        className="mt-2 px-2 py-1 text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600"
+      >
+        Ver Más
+      </button>
+    </div>
+  ))}
+</div>
 
         {/* Additional Sections */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 mb-12">
@@ -151,3 +169,4 @@ export default function Services() {
     </main>
   );
 }
+

@@ -63,7 +63,7 @@ export default function Contact() {
         </div>
 
         {/* Additional Information Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-12">
           {/* Section 1 */}
           <div className="p-6 bg-white rounded-lg shadow-lg">
             <Image
@@ -109,7 +109,7 @@ export default function Contact() {
           {/* Section 4 */}
           <div className="p-6 bg-white rounded-lg shadow-lg">
             <Image
-              src="/images/frequently-asked-questions.jpg"
+              src="/images/frequently-asked-questions.webp"
               alt="FAQs"
               width={600}
               height={400}
