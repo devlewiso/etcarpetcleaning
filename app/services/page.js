@@ -6,157 +6,152 @@ import Link from 'next/link';
 
 const ServicePopup = ({ service, onClose }) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-full w-full mx-4 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-32">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg max-w-full w-full mx-4 sm:mx-8 md:mx-12 lg:mx-24 xl:mx-32 text-center">
+        <Image
+          src={service.imageSrc}
+          alt={service.title}
+          width={300}
+          height={200}
+          className="mx-auto rounded-lg shadow-md mb-4"
+        />
         <h2 className="text-2xl font-bold mb-4 text-blue-500">{service.title}</h2>
         <p className="mb-4 text-gray-700">{service.description}</p>
         <p className="mb-4 font-semibold text-blue-500">Cost: {service.cost}</p>
-        <button
-          onClick={() => window.location.href = 'tel:+18057042301'}
-          className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600"
-        >
-          Call to Schedule
-        </button>
-        <button
-          onClick={onClose}
-          className="px-6 py-3 text-white bg-red-500 rounded-lg shadow-lg hover:bg-red-600 mt-4"
-        >
-          Close
-        </button>
+        <div className="flex justify-center space-x-4">
+          <button
+            onClick={() => window.location.href = 'tel:+18057042301'}
+            className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 mt-4"
+          >
+            Call to Schedule
+          </button>
+          <button
+            onClick={onClose}
+            className="px-6 py-3 text-white bg-red-500 rounded-lg shadow-lg hover:bg-red-600 mt-4"
+          >
+            Close
+          </button>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
     {
-      title: 'Residential Cleaning',
-      description: 'We remove stains and dirt from your carpets to make your home look clean and fresh.',
-      cost: '$99',
-      image: '/images/residential-cleaning.jpg',
+      id: 1,
+      title: "Carpet Cleaning",
+      description: "Professional steam cleaning to remove deep dirt and stubborn stains from your carpets.",
+      cost: "$100",
+      imageSrc: "/images/carpet-cleaning.webp"
     },
     {
-      title: 'Commercial Cleaning',
-      description: 'Specialized services for offices and businesses, ensuring a clean and professional environment.',
-      cost: '$199',
-      image: '/images/commercial-cleaning.jpg',
+      id: 2,
+      title: "Upholstery Cleaning",
+      description: "Expert cleaning for sofas, chairs, and other upholstered furniture.",
+      cost: "$90",
+      imageSrc: "/images/upholstery-cleaning.webp"
     },
     {
-      title: 'Stain Treatment',
-      description: 'Advanced techniques to remove tough stains and keep your carpets in excellent condition.',
-      cost: '$89',
-      image: '/images/stain-treatment.jpg',
+      id: 3,
+      title: "Area Rug Cleaning",
+      description: "Delicate cleaning for area rugs, ensuring colors and fibers are protected.",
+      cost: "$75",
+      imageSrc: "/images/cleaning-process.webp"
     },
     {
-      title: 'Upholstery Cleaning',
-      description: 'Professional cleaning services for your furniture, ensuring it looks as good as new.',
-      cost: '$129',
-      image: '/images/upholstery-cleaning.webp',
+      id: 4,
+      title: "Tile and Grout Cleaning",
+      description: "Steam cleaning to remove grime and restore the shine of tile and grout.",
+      cost: "$120",
+      imageSrc: "/images/tile-grout-cleaning.webp"
     },
     {
-      title: 'Pet Odor Removal',
-      description: 'Specialized treatments to eliminate unpleasant pet odors from your carpets and upholstery.',
-      cost: '$149',
-      image: '/images/pet-odor-removal.webp',
+      id: 5,
+      title: "Hotel - Corridors and Hallways",
+      description: "Professional steam cleaning to remove deep dirt and stubborn stains from your carpets.",
+      cost: "$85",
+      imageSrc: "/images/Hotel-Corridors-and-Hallways.webp"
     },
     {
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
-      cost: '$199',
-      image: '/images/deep-cleaning.webp',
+      id: 6,
+      title: "Arm Chair Guard",
+      description: "Specialized treatments to remove odors from your chairs.",
+      cost: "$110",
+      imageSrc: "/images/Arm-Chair-Guard.webp"
     },
     {
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
-      cost: '$199',
-      image: '/images/deep-cleaning.webp',
+      id: 7,
+      title: "Outdoor Furnitures",
+      description: "Emergency steam cleaning for water-damaged Outdoor Furnitures.",
+      cost: "$200",
+      imageSrc: "/images/outdoor-furnitures.webp"
     },
     {
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
-      cost: '$199',
-      image: '/images/deep-cleaning.webp',
+      id: 8,
+      title: "Commercial Carpet Cleaning",
+      description: "Keep your office carpets looking professional and clean with our commercial services.",
+      cost: "$300",
+      imageSrc: "/images/Commercial Carpet Cleaning.webp"
     },
     {
-      title: 'Deep Cleaning',
-      description: 'Comprehensive cleaning services that reach deep into your carpets for a thorough clean.',
-      cost: '$199',
-      image: '/images/deep-cleaning.webp',
+      id: 9,
+      title: "Mattress Cleaning Different Sizes",
+      description: "Advanced treatments for removing deep, stubborn stains from beds.",
+      cost: "$175",
+      imageSrc: "/images/mattress-removal.webp"
     },
-  ];
+    {
+      id: 10,
+      title: "Recliner Couches",
+      description: "Steam cleaning for your vehicle's interior carpets and upholstery.",
+      cost: "$70",
+      imageSrc: "/images/recliner-couches.webp"
+    },
+    {
+      id: 11,
+      title: "Hardwood Floor Cleaning",
+      description: "Steam cleaning to refresh and sanitize your hardwood floors.",
+      cost: "$150",
+      imageSrc: "/images/hardwood-floor-cleaning.jpg"
+    },
+    {
+      id: 12,
+      title: "Drapery Cleaning",
+      description: "Gentle steam cleaning for curtains and drapes, removing dust and allergens.",
+      cost: "$95",
+      imageSrc: "/images/drapery-cleaning.jpg"
+    },
 
-  const additionalSections = [
-    {
-      title: 'Our Commitment to Quality',
-      description: 'We are dedicated to providing top-notch cleaning services with a focus on quality and customer satisfaction. Our team uses only the best equipment and cleaning solutions to ensure the highest standards.',
-      image: '/images/commitment-quality.jpg',
-    },
-    {
-      title: 'Eco-Friendly Solutions',
-      description: 'Our cleaning solutions are environmentally friendly, ensuring that your home or business is not only clean but also safe for the environment. We are committed to sustainability and eco-conscious practices.',
-      image: '/images/eco-friendly.jpg',
-    }
   ];
+  
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gray-100 text-gray-900">
-      <div className="w-full bg-white p-10 rounded-lg shadow-2xl">
-        {/* Page Heading */}
-        <h1 className="text-4xl font-bold mb-4 text-center">Our Services</h1>
-        <p className="text-lg mb-8 text-center">
-          At ET Steam Carpet Cleaning, we offer a comprehensive range of cleaning services tailored to meet your needs.
-          Whether you&apos;re looking for residential or commercial cleaning, our skilled team is ready to deliver exceptional results.
-        </p>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-3 grid-rows-3 gap-4 mb-12">
-  {services.map((service, index) => (
-    <div key={index} className="p-2 bg-white rounded-lg shadow-md flex flex-col items-center">
-      <Image
-        src={service.image}
-        alt={service.title}
-        width={200}
-        height={150}
-        className="rounded-lg shadow-md mb-2"
-      />
-      <h2 className="text-sm font-semibold mb-2 text-center">{service.title}</h2>
-      <p className="text-xs text-center">{service.description}</p>
-      <button
-        onClick={() => setSelectedService(service)}
-        className="mt-2 px-2 py-1 text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600"
-      >
-        Ver Más
-      </button>
-    </div>
-  ))}
-</div>
-
-        {/* Additional Sections */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 mb-12">
-          {additionalSections.map((section, index) => (
-            <div key={index} className="p-6 bg-card rounded-lg shadow-lg flex flex-col items-center">
-              <Image
-                src={section.image}
-                alt={section.title}
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg mb-4"
-              />
-              <h2 className="text-2xl font-semibold mb-2">{section.title}</h2>
-              <p>{section.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Contact Us Button */}
-        <div className="mt-12 text-center">
-          <Link href="/contact" className="inline-block px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600">
-            Contact Us
-          </Link>
-        </div>
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Our Services</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className="bg-white p-4 rounded-lg shadow-md text-center cursor-pointer hover:shadow-lg"
+            onClick={() => setSelectedService(service)}
+          >
+            <Image
+              src={service.imageSrc}
+              alt={service.title}
+              width={300}
+              height={200}
+              className="mx-auto rounded-lg shadow-md mb-4"
+            />
+            <h2 className="text-xl font-bold mb-2 text-blue-500">{service.title}</h2>
+            <p className="text-gray-700 mb-2">{service.description}</p>
+            <p className="font-semibold text-blue-500">{service.cost}</p>
+          </div>
+        ))}
       </div>
 
       {/* Popup for Selected Service */}
@@ -166,7 +161,7 @@ export default function Services() {
           onClose={() => setSelectedService(null)}
         />
       )}
-    </main>
+    </div>
   );
 }
 
