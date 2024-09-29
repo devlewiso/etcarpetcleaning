@@ -42,14 +42,15 @@ export default function Home() {
             Our team uses the latest technology and eco-friendly products to ensure your carpets are not only clean but also safe for you and your family.
           </p>
           <div className="relative w-full mb-8">
-  <div className="absolute inset-0 z-10 bg-cover bg-center transition-opacity duration-300 opacity-0 hover:opacity-100" style={{ backgroundImage: "url('/images/hover-image.webp')" }}></div>
-  <img
-    src="/images/hover2.jpg" // Ruta de la imagen original
-    alt="Descriptive Alt Text"
-    className="rounded-lg shadow-lg mb-8 inline-block" // object-contain en móviles, object-cover en pantallas medianas y grandes
-  />
-</div>
-
+            <div className="absolute inset-0 z-10 bg-cover bg-center transition-opacity duration-300 opacity-0 hover:opacity-100" style={{ backgroundImage: "url('/images/hover-image.webp')" }}></div>
+            <Image
+              src="/images/hover2.jpg"
+              alt="Descriptive Alt Text"
+              width={800} // Ajusta según tu necesidad
+              height={450} // Ajusta según tu necesidad
+              className="rounded-lg shadow-lg mb-8 inline-block"
+            />
+          </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
             <div className="p-6 bg-card rounded-lg shadow-lg">
@@ -72,58 +73,62 @@ export default function Home() {
             </div>
           </div>
           <Image
-          src="/images/hover1.webp" // Updated path
-          alt="Carpet Cleaning"
-          width={800}
-          height={450}
-          className="rounded-lg shadow-lg mb-8 mt-12 items-center inline-block"
-        />
+            src="/images/hover1.webp"
+            alt="Carpet Cleaning"
+            width={800}
+            height={450}
+            className="rounded-lg shadow-lg mb-8 mt-12 items-center inline-block"
+          />
         </section>
 
-{/* Our Process Section */}
-<section className="w-full mb-12 text-center">
-  <h2 className="text-3xl font-bold mb-4">Our Process</h2>
-  <p className="text-lg mb-8">
-    From scheduling your appointment to completing the job, we follow a meticulous process to ensure the best results.
-  </p>
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"> {/* Cambié lg:grid-cols-4 a lg:grid-cols-3 */}
-    <div className="p-6 bg-card rounded-lg shadow-lg">
-      <img
-        src="/images/schedule-and-appointment.webp" // Reemplaza con la ruta de tu imagen
-        alt="Schedule an Appointment"
-        className="rounded-lg shadow-lg mb-8 inline-block " // Ajusta altura con h-32 y el ancho con w-full
-      />
-      <h3 className="text-xl font-semibold mb-2">1. Schedule an Appointment</h3>
-      <p>
-        Contact us to schedule a convenient time for your carpet cleaning service.
-      </p>
-    </div>
-    <div className="p-6 bg-card rounded-lg shadow-lg">
-      <img
-        src="/images/profesional-cleaning.webp" // Reemplaza con la ruta de tu imagen
-        alt="Professional Cleaning"
-        className="rounded-lg shadow-lg mb-8 inline-block " // Ajusta altura con h-32 y el ancho con w-full
-      />
-      <h3 className="text-xl font-semibold mb-2">2. Professional Cleaning</h3>
-      <p>
-        Our team will arrive on time and perform a thorough cleaning of your carpets.
-      </p>
-    </div>
-    <div className="p-6 bg-card rounded-lg shadow-lg">
-      <img
-        src="/images/quality-check.webp" // Reemplaza con la ruta de tu imagen
-        alt="Quality Check"
-        className="rounded-lg shadow-lg mb-8 inline-block " // Ajusta altura con h-32 y el ancho con w-full
-      />
-      <h3 className="text-xl font-semibold mb-2">3. Quality Check</h3>
-      <p>
-        We conduct a final inspection to ensure that you are completely satisfied with our work.
-      </p>
-    </div>
-  </div>
-</section>
-
-
+        {/* Our Process Section */}
+        <section className="w-full mb-12 text-center">
+          <h2 className="text-3xl font-bold mb-4">Our Process</h2>
+          <p className="text-lg mb-8">
+            From scheduling your appointment to completing the job, we follow a meticulous process to ensure the best results.
+          </p>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="p-6 bg-card rounded-lg shadow-lg">
+              <Image
+                src="/images/schedule-and-appointment.webp"
+                alt="Schedule an Appointment"
+                width={500}
+                height={300}
+                className="rounded-lg shadow-lg mb-8 inline-block"
+              />
+              <h3 className="text-xl font-semibold mb-2">1. Schedule an Appointment</h3>
+              <p>
+                Contact us to schedule a convenient time for your carpet cleaning service.
+              </p>
+            </div>
+            <div className="p-6 bg-card rounded-lg shadow-lg">
+              <Image
+                src="/images/profesional-cleaning.webp"
+                alt="Professional Cleaning"
+                width={500}
+                height={300}
+                className="rounded-lg shadow-lg mb-8 inline-block"
+              />
+              <h3 className="text-xl font-semibold mb-2">2. Professional Cleaning</h3>
+              <p>
+                Our team will arrive on time and perform a thorough cleaning of your carpets.
+              </p>
+            </div>
+            <div className="p-6 bg-card rounded-lg shadow-lg">
+              <Image
+                src="/images/quality-check.webp"
+                alt="Quality Check"
+                width={500}
+                height={300}
+                className="rounded-lg shadow-lg mb-8 inline-block"
+              />
+              <h3 className="text-xl font-semibold mb-2">3. Quality Check</h3>
+              <p>
+                We conduct a final inspection to ensure that you are completely satisfied with our work.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Contact Us Button */}
         <div className="mt-12">

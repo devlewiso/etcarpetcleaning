@@ -14,7 +14,7 @@ export default function Custom404() {
       />
       <h1 className="text-5xl font-bold text-gray-800">Oops! Page Not Found</h1>
       <p className="mt-4 text-lg text-gray-600">
-        Sorry, the page you're looking for doesn't exist. 
+        Sorry, the page you&apos;re looking for doesn&apos;t exist.
       </p>
       <p className="text-gray-600">
         If you need help with our cleaning services, feel free to get in touch with us!
