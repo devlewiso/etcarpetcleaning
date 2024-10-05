@@ -19,7 +19,7 @@ export default function ServiceDetailPage({ params }) {
   const filteredServices = services.filter((s) => s.slug !== slug);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pt-16">
       {/* Botón para mostrar sidebar en móvil */}
       <div className="sticky top-0 z-20 md:hidden bg-white shadow-sm">
         <button
