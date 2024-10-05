@@ -12,12 +12,12 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-16">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">
-          Nuestros Servicios
-        </h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">
+        Our Services
+      </h1>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
-          Descubre nuestra amplia gama de servicios profesionales diseñados para satisfacer tus necesidades
-        </p>
+        Discover our wide range of professional services designed to meet your needs.
+      </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
