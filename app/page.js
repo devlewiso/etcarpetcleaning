@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-background text-foreground">
-      <div className="w-full text-center">
+      <div className="w-full text-center pt-16">
         {/* Phone Number Section */}
         <div className="mb-8">
           <p className="text-xl font-bold">Schedule an Appointment: <a href="tel:+18027042301" className="text-blue-500 hover:underline">+1 (805) 704-2301</a></p>
