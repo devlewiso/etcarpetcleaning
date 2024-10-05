@@ -65,7 +65,7 @@ export default function Header() {
               href="tel:+18057042301"
               className="block w-full text-center px-4 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
             >
-              Llamar ahora
+              Call us
             </a>
           </div>
         </nav>
